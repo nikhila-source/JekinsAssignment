@@ -21,7 +21,7 @@
 					
 				}
 			}
-			stage ('Build env.ARTIFACTID} and env.VERSION') {
+			stage ('Build env.ARTIFACTID and env.VERSION') {
 				steps {
 					script {
 					
@@ -30,7 +30,7 @@
 					}
 				}
 			}
-         	stage ('Awaiting for approval for deploying env.ARTIFACTID} and env.VERSION') {
+         	stage ('Awaiting for approval for deploying env.ARTIFACTID and env.VERSION') {
 				steps {
 					script {
 						timeout(time: 300, unit: 'SECONDS') {
@@ -40,7 +40,7 @@
 				}
 			}
           
-          	stage ('Deploying env.ARTIFACTID} and env.VERSION') {
+          	stage ('Deploying env.ARTIFACTID and env.VERSION') {
 				steps {
 					script {
 						echo "Here I dont have available EC2 right now."
