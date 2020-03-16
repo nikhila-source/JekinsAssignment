@@ -24,7 +24,7 @@
 			stage ('Build ${env.ARTIFACTID} and ${env.VERSION}') {
 				steps {
 					script {
-					
+						echo "${ARTIFACTID} ${VERSION}"
 					sh "mvn clean install"
 					
 					}
