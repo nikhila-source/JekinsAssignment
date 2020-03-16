@@ -39,10 +39,9 @@ def call() {
 					script {
 						sh "Here ssh into EC2 instance and deploy to tomcat."
 						sh "I'm skipping this, since I dont have instance ready"
-						}
 					}
 				}
 			}
-		}  	
-    }
+		}
+	}  	
 }
