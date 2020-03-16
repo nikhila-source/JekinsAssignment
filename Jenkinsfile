@@ -21,7 +21,7 @@
 					
 				}
 			}
-			stage ('Build $"{ARTIFACTID}" and env.VERSION') {
+			stage ('Build ${env.ARTIFACTID} and ${env.VERSION}') {
 				steps {
 					script {
 						echo "${ARTIFACTID} ${VERSION}"
