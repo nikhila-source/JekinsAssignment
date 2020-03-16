@@ -13,7 +13,13 @@ def call() {
 		}
 		stages {
 			stage ('Checkout Source Code') {
-				checkout scm
+				steps {
+					
+					
+					checkout scm
+					
+					
+				}
 			}
 			stage ('Build ${ARTIFACTID} and ${VERSION}') {
 				steps {
