@@ -21,7 +21,7 @@
 					
 				}
 			}
-			stage ('Build ${ARTIFACTID} and ${VERSION}') {
+			stage ("Build ${ARTIFACTID} and ${VERSION}") {
 				steps {
 					script {
 					
@@ -30,7 +30,7 @@
 					}
 				}
 			}
-         	stage ('Awaiting for approval for deploying ${ARTIFACTID} and ${VERSION}') {
+         	stage ("Awaiting for approval for deploying ${ARTIFACTID} and ${VERSION}") {
 				steps {
 					script {
 						timeout(time: 300, unit: 'SECONDS') {
@@ -40,11 +40,12 @@
 				}
 			}
           
-          	stage ('Deploying ${ARTIFACTID} and ${VERSION}') {
+          	stage ("Deploying ${ARTIFACTID} and ${VERSION}") {
 				steps {
 					script {
-						sh "Here ssh into EC2 instance and deploy to tomcat."
-						sh "I'm skipping this, since I dont have instance ready"
+						echo "Here I dont have available EC2 right now."
+						echo "So, deploying into local tomcat"
+						sh "cp ${WORKSPACE}/target/JenkinsAssignment.war /opt/apache-tomcat-8.0.32/webapps/"
 					}
 				}
 			}
