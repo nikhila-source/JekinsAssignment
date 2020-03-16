@@ -21,7 +21,7 @@
 					
 				}
 			}
-			stage ('Build $'ARTIFACTID' and $'VERSION'') {
+			stage ('Build ${BRANCH_NAME} $ARTIFACTID and $VERSION') {
 				steps {
 					script {
 					
