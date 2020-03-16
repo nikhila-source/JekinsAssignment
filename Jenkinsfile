@@ -16,7 +16,7 @@ def call() {
 				steps {
 					
 					
-					checkout scm
+					git branch: 'develop', url: 'https://github.com/nikhila-source/JekinsAssignment.git'
 					
 					
 				}
